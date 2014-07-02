@@ -10,7 +10,7 @@ host_template = """
 <strong>Info:</strong>
 <pre>{hostoutput}</pre><br>
 <strong>Notes:</strong> {notes}<br>
-<strong>Notes URL:</strong> {notesurl}
+<strong>Notes URL:</strong> <a href="{notesurl}">{notesurl}</a>
 """
 
 host_short_template = """[{ntype}] {hostname}: {hostoutput}"""
@@ -23,7 +23,7 @@ service_template = """
 <strong>Info:</strong>
 <pre>{serviceoutput}</pre><br>
 <strong>Notes:</strong> {notes}<br>
-<strong>Notes URL:</strong> {notesurl}
+<strong>Notes URL:</strong> <a href="{notesurl}">{notesurl}</a>
 """
 
 service_short_template = "[{ntype}] {hostalias} {servicedesc}: {serviceoutput}"
