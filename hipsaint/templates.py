@@ -8,7 +8,9 @@ host_template = """
 <strong>Host:</strong> {hostname} (<a href="{hostaddress}">{hostaddress}</a>)<br/>
 <strong>State:</strong> {state}<br>
 <strong>Info:</strong>
-<pre>{hostoutput}</pre>
+<pre>{hostoutput}</pre><br>
+<strong>Notes:</strong> {notes}<br>
+<strong>Notes URL:</strong> {notesurl}
 """
 
 host_short_template = """[{ntype}] {hostname}: {hostoutput}"""
@@ -19,7 +21,9 @@ service_template = """
 <strong>Host:</strong> {hostalias} (<a href="{hostaddress}">{hostaddress}</a>)<br/>
 <strong>State:</strong> {state}<br/>
 <strong>Info:</strong>
-<pre>{serviceoutput}</pre>
+<pre>{serviceoutput}</pre><br>
+<strong>Notes:</strong> {notes}<br>
+<strong>Notes URL:</strong> {notesurl}
 """
 
 service_short_template = "[{ntype}] {hostalias} {servicedesc}: {serviceoutput}"

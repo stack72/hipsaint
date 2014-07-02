@@ -57,15 +57,16 @@ class HipchatMessage(object):
         return raw_response
 
     def get_host_context(self):
-        hostname, timestamp, ntype, hostaddress, state, hostoutput = self.inputs_list
+        hostname, timestamp, ntype, hostaddress, state, hostoutput, notes, notesurl = self.inputs_list
         return {'hostname': hostname, 'timestamp': timestamp, 'ntype': ntype,
-                'hostaddress': hostaddress, 'state': state, 'hostoutput': hostoutput}
+                'hostaddress': hostaddress, 'state': state, 'hostoutput': hostoutput,
+                'notes': notes, 'notesurl': notesurl}
 
     def get_service_context(self):
-        servicedesc, hostalias, timestamp, ntype, hostaddress, state, serviceoutput = self.inputs_list
+        servicedesc, hostalias, timestamp, ntype, hostaddress, state, serviceoutput, notes, notesurl = self.inputs_list
         return {'servicedesc': servicedesc, 'hostalias': hostalias, 'timestamp': timestamp,
                 'ntype': ntype, 'hostaddress': hostaddress, 'state': state,
-                'serviceoutput': serviceoutput}
+                'serviceoutput': serviceoutput, 'notes': notes, 'notesurl': notesurl}
 
     def render_message(self):
         """
